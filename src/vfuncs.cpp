@@ -10,31 +10,6 @@
 
 #include "vfuncs.h"
 
-void CBaseAnimating_SetSequence(C_BaseAnimating *pThisPtr, int nSequence) {
-	//Magic from SourceMod
-	void **this_ptr = *(void ***)&pThisPtr;
-	void **vtable = *(void ***)pThisPtr;
-	void *func = vtable[Index_CBaseAnimating_SetSequence];
-
-	union {
-		void (WSEmptyClass::*mfpnew)(int);
-#if !defined(_LINUX) && !defined(_OSX)
-		void *addr;
-	} u;
-	u.addr = func;
-#else
-		struct {
-			void *addr;
-			intptr_t adjustor;
-		} s;
-	} u;
-	u.s.addr = func;
-	u.s.adjustor = 0;
-#endif
-
-	(void) (reinterpret_cast<WSEmptyClass*>(this_ptr)->*u.mfpnew)(nSequence);
-}
-
 DWORD *HookVFunc(DWORD *vtable, int index, DWORD *newFunction)
 {
 	#ifndef _POSIX

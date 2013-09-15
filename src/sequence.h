@@ -1,6 +1,6 @@
 /*
- *  portalstv.h
- *  PortalSTV project
+ *  sequence.h
+ *  SetSequence project
  *  
  *  Copyright (c) 2013 Matthew McNamara
  *  BSD 2-Clause License
@@ -8,8 +8,8 @@
  *
  */
 
-#ifndef PORTALSTV_H
-#define PORTALSTV_H
+#ifndef SEQUENCE_H
+#define SEQUENCE_H
 
 #define CLIENT_DLL
 
@@ -18,7 +18,6 @@
 #include "tier1/tier1.h"
 #include "engine/iserverplugin.h"
 
-#include "offsets.h"
 #include "vfuncs.h"
 
 #include "cbase.h"
@@ -29,16 +28,16 @@
 #include "edict.h"
 #include "igameresources.h"
 
-#define PLUGIN_DESC "PortalSTV a1"
+#define PLUGIN_DESC "SetSequence 1.0"
 
 IBaseClientDLL* pClient;
 IClientEntityList* pEntityList;
 
-class PortalSTVPlugin: public IServerPluginCallbacks
+class SequencePlugin: public IServerPluginCallbacks
 {
 public:
-	PortalSTVPlugin();
-	~PortalSTVPlugin();
+	SequencePlugin();
+	~SequencePlugin();
 
 	// IServerPluginCallbacks methods
 	virtual bool			Load(	CreateInterfaceFn interfaceFactory, CreateInterfaceFn gameServerFactory );

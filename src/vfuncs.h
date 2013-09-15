@@ -18,16 +18,7 @@
 
 class WSEmptyClass {};
 
-//class CBaseCombatCharacter;
-
-#if defined( _POSIX )
-#define Index_CBaseCombatCharacter_UpdateGlowEffect 284 // client.so & .dylib
-#else
-#define Index_CBaseCombatCharacter_UpdateGlowEffect 222 // client.dll
-#define Index_CBaseAnimating_SetSequence 179 //mayb
-#endif
-
-extern void CBaseAnimating_SetSequence(C_BaseAnimating *pThisPtr, int nSequence);
+#define Index_CBaseAnimating_SetSequence 179
 
 #if !defined( _POSIX )
 #define WIN32_LEAN_AND_MEAN
