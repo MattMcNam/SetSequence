@@ -4,7 +4,9 @@ SetSequence
 About
 -
 SetSequence is a plugin for Portal which allows you to override Chell's animation sequences. This can be used to fix the T-pose sequence which will sometimes occur when leaving a portal.  
-It is used in an upcoming Portal video to fix the above issue, and will be linked to here upon release.
+It is used in the video [She Got Bored](http://www.youtube.com/watch?v=vqv01s3oZGU), by [Lange (@VanCamp)](https://twitter.com/VanCamp)  
+  
+To download, click the Releases tab above and click the big green button
 
 Usage
 -
